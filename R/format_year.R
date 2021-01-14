@@ -1,9 +1,8 @@
-#' Format a year into the correct FY format
+#' Format a year into the correct short FY format
 #'
 #' @param year Year in any format
 #'
-#' @return Year correctly formatted as "CCYY"
-#'
+#' @return Year correctly formatted as short FY
 format_year <- function(year) {
   year <- stringr::str_remove(year, "/")
   year <- stringr::str_extract(as.character(year), "\\d{2}\\d{2}$")
